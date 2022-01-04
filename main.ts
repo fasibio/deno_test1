@@ -1,7 +1,9 @@
-import {serve} from 'http/server.ts'
-console.log('http://localhost:8000')
+import {serve} from './lib.ts'
+const port = 8001
+
+console.log(`http://localhost:${port}`)
 serve((req) => {
   return new Response("Hello")
 },{
-  port: 8000
+  port,
 })
